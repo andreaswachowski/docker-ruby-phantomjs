@@ -1,7 +1,7 @@
-FROM ruby:2.1.5
+FROM ruby:2.4.1
 
 # Env
-ENV PHANTOMJS_VERSION 1.9.8
+ENV PHANTOMJS_VERSION 2.1.1
 
 # Install phantomjs
 RUN mkdir -p /srv/var && \
@@ -10,3 +10,4 @@ RUN mkdir -p /srv/var && \
   rm -f /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
   mv /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/ /srv/var/phantomjs && \
   ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs
+
